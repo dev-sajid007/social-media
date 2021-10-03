@@ -27,10 +27,10 @@
                 <ul class="navbar-nav" style="margin-left: auto">
                     @if(\Illuminate\Support\Facades\Auth::check())
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{\Illuminate\Support\Facades\Auth::user()->username}}</a>
+                        <a class="nav-link" href="{{route('profile.index',Auth::user()->username)}}">{{\Illuminate\Support\Facades\Auth::user()->username}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Update Profile</a>
+                        <a class="nav-link" href="">Update Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('auth.signout')}}">Sign out</a>
